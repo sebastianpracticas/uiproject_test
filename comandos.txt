@@ -1,2 +1,2 @@
+#sincronizar con la rueda de abajo izquierda
 git commit -a -m "Añadir comandos dos"
-sincronizar con la rueda de abajo izquierda
