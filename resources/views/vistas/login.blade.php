@@ -8,7 +8,7 @@
     <div class="row justify-content-center">
         <div class="col-sm-4 mt-5 mb-5">
             
-            <form method="POST" action="/insertar">
+            <form method="POST" action="/login">
 
                 <!-- Mensaje que paso por el redirect -->
                 @if(session('status'))

@@ -12,7 +12,20 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\UsersController;
 
 Route::get('/', function () {
+    return view('vistas/home');
+});
+
+Route::post('/login', [UsersController::class, 'session']);
+Route::get('/login', function () {
     return view('vistas/login');
+});
+
+
+Route::post('/register', [UsersController::class, 'register']);
+
+Route::get('/register', function () {
+    return view('vistas/register');
 });
