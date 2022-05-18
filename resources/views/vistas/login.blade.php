@@ -31,6 +31,10 @@
                 <p class="error">
                     @error('password'){{ $message}} @enderror
                 </p>
+                
+                <input type="checkbox" name="remember" id="remember">
+                <label for="remember">Recuerda mi sesión</label>
+                
                 <input class="btn btn-primary btn-block mt-2 mb-2" type="submit" value="Enviar">
             </form>
         </div>
