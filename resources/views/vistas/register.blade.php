@@ -27,12 +27,6 @@
                     @error('name'){{ $message}} @enderror
                 </p>
 
-                <label class="form-label" for="password">Contraseña</label>
-                <input class="form-control" type="password" id="password" name="password">
-                <!-- Errores y validación -->
-                <p class="error">
-                    @error('password'){{ $message}} @enderror
-                </p>
 
                 <label class="form-label" for="email">Email</label>
                 <input class="form-control" type="email" id="email" name="email">
@@ -41,22 +35,16 @@
                     @error('email'){{ $message}} @enderror
                 </p>
 
-                <label class="form-label" for="role">Role</label>
-                <select name="role" id="role" class="form-select">
-                    <option value=""><b> ROLE</b></option>
-                    <option value="admin">Admin</option>
-                    <option value="user">User</option>
-                </select>
+                <label class="form-label" for="password">Contraseña</label>
+                <input class="form-control" type="password" id="password" name="password">
                 <!-- Errores y validación -->
                 <p class="error">
-                    @error('role'){{ $message}} @enderror
+                    @error('password'){{ $message}} @enderror
                 </p>
 
                 <input class="btn btn-primary btn-block mt-2 mb-2" type="submit" value="Enviar">
             </form>
         </div>
-
-
     </div>
 </div>
 

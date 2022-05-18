@@ -18,14 +18,19 @@ Route::get('/', function () {
     return view('vistas/home');
 });
 
-Route::post('/login', [UsersController::class, 'session']);
+
+
+ 
 Route::get('/login', function () {
     return view('vistas/login');
 });
 
+Route::post('/login', [UsersController::class, 'session']);
 
-Route::post('/register', [UsersController::class, 'register']);
+
 
 Route::get('/register', function () {
     return view('vistas/register');
 });
+
+Route::post('/register', [UsersController::class, 'register']);

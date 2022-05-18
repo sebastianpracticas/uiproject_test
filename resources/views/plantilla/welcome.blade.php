@@ -44,8 +44,7 @@
         <div class="container-fluid">
             <a href="/" class="navbar-brand">HOME</a>
             <div>
-                <a href="/">Pisos</a>
-                <a href="/insertar">Insertar</a>
+                <a>Hola {{Auth::user()->name }}</a>
                 <form method="POST" action="/logout" style="display: inline;">
                     @csrf
                     <a href="#" onclick="this.closest('form').submit()">Salir</a>
