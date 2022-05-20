@@ -60,7 +60,7 @@ font-size: 34px;
 font-family: 'Nunito', sans-serif;
 font-weight: 600;
 }
-nav.menuprincipal .menu >a{
+nav.menuprincipal .menu >a, nav.menuprincipal .menu >form >a{
 color: white;
 margin: 18px;
 font-weight: 600;
@@ -105,4 +105,13 @@ nav{
     text-decoration: underline;
     padding-top: .5em;
     padding-bottom: 1em;
+}
+
+.rel-top-70-px {
+    position: relative;
+    top: 70px;
+}
+
+.mar-bottom-70-px {
+    margin-bottom: 70px;
 }

@@ -84,7 +84,7 @@
 <!--Razones para elegirnos-->
 
 <div class="container">
-    <div class="Razones para elegirnos row">
+    <div class="row mar-bottom-70-px" style="margin-bottom: 70px">
         <div class="col-12">
             <h1 class="h1 align-center">¿Por qué elegirnos?</h1> 
         </div>
@@ -92,7 +92,7 @@
             <h1>Trato personalizado</h1> 
             <p>Atendemos a tus consultas de manera rápida. Incluimos el mantenimiento dentro de nuestro servicio.</p>  
         </div>
-        <div class="col-12 col-md-4 align-center">
+        <div class="col-12 col-md-4 align-center rel-top-70-px" style="position: relative; top: 70px;">
             <h1>Manejo de tecnologías</h1> 
             <p>Hacemos uso de multitud de tecnologias para la creación de tu web, todo pasa por un proceso ordenado y el resultado es un servicio eficaz y profesional.</p>
         </div>
