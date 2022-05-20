@@ -71,11 +71,9 @@
             setInterval(function() {
                 //Crear un objeto Fecha
                 var fecha = new Date()
-
                 var h = fecha.getHours().toLocaleString()
                 var m = fecha.getMinutes().toLocaleString()
                 var s = fecha.getSeconds().toLocaleString()
-
                 if (m <= 9) {
                     m = "0" + m
                 }
@@ -88,7 +86,6 @@
                 //Escribir la fecha
                 document.getElementById("fecha").innerHTML = h + ":" + m + ":" + s
             }, 1000)
-
             //Evita que la pagina se pueda refrescar
             if (window.history.replaceState) {
                 window.history.replaceState(null, null, window.location.href);
