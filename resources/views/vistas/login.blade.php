@@ -20,13 +20,13 @@
                 <!-- Token de Larabel -->
                 @csrf
                 <label class="form-label" for="name">Usuario</label>
-                <input autofocus class="form-control" type="text" id="name" name="name">
+                <input autofocus class="form-control" type="text" id="name" name="name"  required>
                 <!-- Errores y validación -->
                 <p class="error">
                     @error('name'){{ $message}} @enderror
                 </p>
                 <label class="form-label" for="password">Contraseña</label>
-                <input class="form-control" type="password" id="password" name="password">
+                <input class="form-control" type="password" id="password" name="password" required>
                 <!-- Errores y validación -->
                 <p class="error">
                     @error('password'){{ $message}} @enderror

@@ -38,3 +38,7 @@ Route::get('/dashboard',function(){
 
     return view('vistas/dashboard');
 })->middleware('auth');
+
+
+#Ruta cerrar sesión
+Route::post('/logout',[UsersController::class, 'logout']);
