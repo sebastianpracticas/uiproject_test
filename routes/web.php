@@ -18,6 +18,7 @@ use App\Http\Controllers\UsersController;
 Route::get('/', function () {
     return view('vistas/home');
 });
+
  
 #Rutas login
 Route::get('/login', function () {
