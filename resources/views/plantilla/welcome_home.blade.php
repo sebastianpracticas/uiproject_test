@@ -55,9 +55,13 @@
             </a>
             @else
             <!-- Si esta logeado => Aparece botón de salir-->
-            <form method="POST" action="/logout" style="display: inline;">
+            <form method="POST" action="/logout">
                 @csrf
-                <a href="#" onclick="this.closest('form').submit()">CERRAR SESIÓN</a>
+                <a href="#" onclick="this.closest('form').submit()">
+                    <div class="w-100">
+                        <span> CERRAR SESIÓN    </span>     
+                    </div>
+                </a>
             </form>
             @endguest
        </div>
