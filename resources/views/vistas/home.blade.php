@@ -3,17 +3,6 @@
 
 <!-- Inicio de la seccion content -->
 @section('content')
-<<<<<<< HEAD
-
-
-
-
-    Estas en la home
-
-
-
-
-=======
 <!--
 <div class="arrow-right"> </div>
 -->
@@ -121,6 +110,5 @@
             nextText: 'prueba',
             prevText: '<img src="img/Flecha.png"></img>',
 });</script>
->>>>>>> 2272a9531b0a8b6e2563e9f4b38ff439446cf2c2
 
 @endsection('content')

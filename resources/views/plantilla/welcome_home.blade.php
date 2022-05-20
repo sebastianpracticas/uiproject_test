@@ -18,10 +18,10 @@
 <div class="containerprincipal">
     <nav class="menuprincipal row">
         <div class="logo col-4 align-items-stretch">
-            <a href="" class="Logo align-items-center">Ui Proyect</a>
+            <a href="/" class="Logo align-items-center">Ui Proyect</a>
         </div>
         <div class="menu d-flex col-auto  align-items-stretch">    
-            <a href="#" class="d-flex align-items-center">
+            <a href="/" class="d-flex align-items-center">
                 <div class="w-100">
                     <span> INICIO    </span>     
                 </div>

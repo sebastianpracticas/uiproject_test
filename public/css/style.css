@@ -12,6 +12,10 @@ body {
     padding-top: 70px;
 }
 
+p.error {
+    color: red;
+}
+
 .align-center {
     text-align: center;
 }
