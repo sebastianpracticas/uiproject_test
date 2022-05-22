@@ -130,3 +130,17 @@ footer * {
 {
     opacity:0;
 }
+
+.dashboard-principal {
+    height: 800px;
+}
+
+.dashboard_menu *, .dashboard_content * {
+    padding: 1em;
+}
+
+.dashboard-button {
+    border: 1px solid black;
+    background-color: #4B4D4E;
+    color: white;
+}
