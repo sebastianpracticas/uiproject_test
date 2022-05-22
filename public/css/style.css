@@ -9,7 +9,8 @@
 }
 
 body {
-    padding-top: 70px;
+    padding-top: 90px;
+
 }
 
 p.error {
@@ -118,4 +119,14 @@ nav{
 
 .mar-bottom-70-px {
     margin-bottom: 70px;
+}
+
+footer * {
+    padding: .1em 1em .1em 1em;
+}
+
+/*----ANIMACIONES-----*/
+.hideme
+{
+    opacity:0;
 }
