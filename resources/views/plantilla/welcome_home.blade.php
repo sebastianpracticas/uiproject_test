@@ -16,7 +16,6 @@
 </head>
 
 <body>
-<<<<<<< HEAD
     <!--Menu-->
     <div class="containerprincipal">
         <nav class="menuprincipal row">
@@ -60,60 +59,6 @@
                 <!-- Si esta logeado => Aparece botón de salir-->
                 <a href="#" class="d-flex align-items-center">
                     <div class="w-100">
-=======
-<!--Menu--> 
-<div class="containerprincipal">
-    <nav class="menuprincipal row">
-        <div class="logo col-4 align-items-stretch">
-            <a href="/" class="Logo align-items-center">Ui Proyect</a>
-        </div>
-        <div class="menu d-flex col-auto  align-items-stretch">    
-            <a href="/" class="d-flex align-items-center">
-                <div class="w-100">
-                    <span> INICIO    </span>     
-                </div>
-            </a>
-            <a href="#" class="d-flex align-items-center">
-                <div class="w-100">
-                    <span> SERVICIOS    </span>     
-                </div>
-            </a>
-            <a href="#" class="d-flex align-items-center">
-                <div class="w-100">
-                    <span> PLANES    </span>     
-                </div>
-            </a>
-            <a href="#" class="d-flex align-items-center">
-                <div class="w-100">
-                    <span> CONTACTO    </span>     
-                </div>
-            </a>
-            <!-- Si no esta logeado => Aparecen botones de login y register -->
-            @guest
-            <a href="/register" class="d-flex align-items-center">
-                <div class="w-100">
-                    <span> REGISTRARSE    </span>     
-                </div>
-            </a>
-            <a href="/login" class="d-flex align-items-center">
-                <div class="w-100">
-                    <span> INICIAR SESION    </span>     
-                </div>
-            </a>
-            @else
-            <!-- Si esta logeado => Aparece botón de salir-->
-            <form method="POST" action="/logout">
-                @csrf
-                <a href="#" onclick="this.closest('form').submit()">
-                    <div class="w-100">
-                        <span> CERRAR SESIÓN    </span>     
-                    </div>
-                </a>
-            </form>
-            @endguest
-       </div>
-    </nav >
->>>>>>> 3373d75b2ec0244a134601823d3d5345a98d1bb3
 
                         <span>
 
