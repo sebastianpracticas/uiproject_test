@@ -18,6 +18,8 @@ function check_visibility() {
             $(this).animate({'opacity':'1'},500);
         }
     }); 
+}
+
 function clickCuenta() {
     document.getElementById("miCuenta").style.display = "block";
     document.getElementById("misCompras").style.display = "none";
