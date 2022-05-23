@@ -43,3 +43,5 @@ Route::get('/dashboard',function(){
 
 #Ruta cerrar sesión
 Route::post('/logout',[UsersController::class, 'logout']);
+
+Route::post("/actualizarCuenta", [DatabaseController::class, 'updateAccount']);

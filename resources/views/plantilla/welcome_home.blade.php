@@ -16,51 +16,6 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-    <!--Menu-->
-    <div class="containerprincipal">
-        <nav class="menuprincipal row">
-            <div class="logo col-4 align-items-stretch">
-                <a href="" class="Logo align-items-center">Ui Proyect</a>
-            </div>
-            <div class="menu d-flex col-auto  align-items-stretch">
-                <a href="#" class="d-flex align-items-center">
-                    <div class="w-100">
-                        <span> INICIO </span>
-                    </div>
-                </a>
-                <a href="#" class="d-flex align-items-center">
-                    <div class="w-100">
-                        <span> SERVICIOS </span>
-                    </div>
-                </a>
-                <a href="#" class="d-flex align-items-center">
-                    <div class="w-100">
-                        <span> PLANES </span>
-                    </div>
-                </a>
-                <a href="#" class="d-flex align-items-center">
-                    <div class="w-100">
-                        <span> CONTACTO </span>
-                    </div>
-                </a>
-                <!-- Si no esta logeado => Aparecen botones de login y register -->
-                @guest
-                <a href="/register" class="d-flex align-items-center">
-                    <div class="w-100">
-                        <span> REGISTRARSE </span>
-                    </div>
-                </a>
-                <a href="/login" class="d-flex align-items-center">
-                    <div class="w-100">
-                        <span> INICIAR SESION </span>
-                    </div>
-                </a>
-                @else
-                <!-- Si esta logeado => Aparece botón de salir-->
-                <a href="#" class="d-flex align-items-center">
-                    <div class="w-100">
-=======
 <!--Menu--> 
 <div class="containerprincipal">
     <nav class="menuprincipal row">
@@ -106,46 +61,13 @@
                 @csrf
                 <a href="#" onclick="this.closest('form').submit()">
                     <div class="w-100">
-                        <span> CERRAR SESIÓN    </span>     
+                        <span> CERRAR SESION </span>
                     </div>
                 </a>
             </form>
             @endguest
        </div>
     </nav >
->>>>>>> 3373d75b2ec0244a134601823d3d5345a98d1bb3
-
-                        <span>
-
-
-                            <form method="POST" action="/logout">
-                                @csrf
-                                <a href="#" onclick="this.closest('form').submit()">CERRAR SESIÓN</a>
-                            </form>
-
-
-                        </span>
-
-                    </div>
-                    <a href="#" class="d-flex align-items-center">
-                    <div class="w-100">
-
-                        <span>
-
-
-                        Hola {{Auth::user()->name }}
-
-
-                        </span>
-
-                    </div>
-
-                    
-                </a>
-
-                @endguest
-            </div>
-        </nav>
 
         <!-- Contenido -->
         @yield('content')
@@ -189,13 +111,15 @@
             <p style="color: rgb(231, 231, 231);">Todos los derechos reservados 2022s @Copyright</p>
         </nav>
     </footer>
-    <script src="js/app.js"></script>
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <script src="js/app.js"></script>
 
 </body>
 
