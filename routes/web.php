@@ -30,7 +30,7 @@ Route::post('/login', [UsersController::class, 'session']);
 #Rutas register
 Route::get('/register', function () {
     return view('vistas/register');
-});
+})->middleware('guest');
 
 Route::post('/register', [UsersController::class, 'register']);
 
