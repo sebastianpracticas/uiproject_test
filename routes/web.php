@@ -30,7 +30,7 @@ Route::post('/login', [UsersController::class, 'session']);
 #Rutas register
 Route::get('/register', function () {
     return view('vistas/register');
-});
+})->middleware('guest');
 
 Route::post('/register', [UsersController::class, 'register']);
 
@@ -43,3 +43,5 @@ Route::get('/dashboard',function(){
 
 #Ruta cerrar sesión
 Route::post('/logout',[UsersController::class, 'logout']);
+
+Route::post("/actualizarCuenta", [DatabaseController::class, 'updateAccount']);

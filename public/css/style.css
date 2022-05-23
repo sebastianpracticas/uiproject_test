@@ -144,3 +144,31 @@ footer * {
     background-color: #4B4D4E;
     color: white;
 }
+
+.dashboard-menu-button {
+    background-color: rgb(44, 44, 44);
+    padding: .5em 1em .5em 1em;
+}
+
+.dashboard-menu-button span {
+    color: white;
+    padding: .2em 1em .2em 1em;
+}
+
+.dashboard-menu-button:hover {
+    background-color:rgb(185, 185, 185)
+}
+
+.dashboard-menu-button:hover span {
+    color: black;
+}
+
+.dashboard-menu {
+    background-color: rgb(44, 44, 44);
+    min-height: 700px;
+}
+
+.dashboard-content {
+    min-height: 700px;
+    padding-left: 1em;
+}

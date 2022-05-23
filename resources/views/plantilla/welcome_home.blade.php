@@ -68,6 +68,7 @@
        </div>
     </nav>
 
+
         <!-- Contenido -->
         @yield('content')
 
@@ -118,6 +119,8 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
 <script src="js/app.js"></script>
+
+    <script src="js/app.js"></script>
 
 </body>
 
