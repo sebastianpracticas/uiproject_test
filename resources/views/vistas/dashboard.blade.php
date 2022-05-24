@@ -24,7 +24,6 @@
                 <label for="inputCorreo">Correo</label>
                 <input id="inputCorreo" name="correo" type="text" value="{{ $data["correo"] }}">
                 
-                <!-- AÑADIR PARA LOS SIGUIENTES 3 UN IF PARA QUE NO SE MUESTRE SI data["rol"] ES ADMIN -->
                 @if($data["rol"] == "user")
                 <label for="inputDireccion">Dirección</label>
                 <input id="inputDireccion" name="direccion" type="text" value="{{ $data["direccion"] }}">
@@ -39,9 +38,12 @@
         </div>
         <div id="misCompras" style="display: none;" class="dashboard-content col-xs-12 col-sm-12 col-md-8 col-lg-9">
             <span>Mis compras</span>
+            <!-- Solo lo ve el usuario normal -->
         </div>
+        <!-- CREAR OTRA QUE SOLO VERÁ EL ADMIN CON PLANTILLAS -->
         <div id="misMensajes" style="display: none;" class="dashboard-content col-xs-12 col-sm-12 col-md-8 col-lg-9">
             <span>Mis mensajes</span>
+            <!-- El admin debe tener un menú para elegir chat -->
         </div>
     </div>
 @endsection('content')
