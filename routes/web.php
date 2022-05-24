@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LayoutController;
+use App\Http\Controllers\MessageController;
 
 #Ruta principal
 Route::get('/', function () {
@@ -43,3 +45,9 @@ Route::get('/dashboard', [DashboardController::class, 'loadDashboard'])->middlew
 Route::post('/logout',[UsersController::class, 'logout']);
 
 Route::post("/actualizarCuenta", [DatabaseController::class, 'updateAccount']);
+
+Route::post("/nuevoMensaje", [MessageController::class, 'newMessage']);
+
+Route::post("/nuevaPlantilla", [LayoutController::class, 'newLayout']);
+
+Route::post("/actualizarPlantilla", [LayoutController::class, 'updateLayout']);
