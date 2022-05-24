@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\DashboardController;
 
 #Ruta principal
 Route::get('/', function () {
@@ -35,10 +36,7 @@ Route::get('/register', function () {
 Route::post('/register', [UsersController::class, 'register']);
 
 #Ruta dashboard
-Route::get('/dashboard',function(){
-
-    return view('vistas/dashboard');
-})->middleware('auth');
+Route::get('/dashboard', [DashboardController::class, 'loadDashboard'])->middleware('auth');
 
 
 #Ruta cerrar sesión

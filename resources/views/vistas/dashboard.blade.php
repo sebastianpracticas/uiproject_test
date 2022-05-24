@@ -20,15 +20,20 @@
         <div id="miCuenta" style="display: block;" class="dashboard-content col-xs-12 col-sm-12 col-md-8 col-lg-9">
             <form method="post" action="localhost:8000/actualizarCuenta">
                 <label for="inputNombre">Nombre</label>
-                <input id="inputNombre" name="nombre" type="text" value="{{ data["nombre"] }}">
+                <input id="inputNombre" name="nombre" type="text" value="{{ $data["nombre"] }}">
                 <label for="inputCorreo">Correo</label>
-                <input id="inputCorreo" name="correo" type="text" value="{{ data["correo"] }}">
+                <input id="inputCorreo" name="correo" type="text" value="{{ $data["correo"] }}">
+                
+                <!-- AÑADIR PARA LOS SIGUIENTES 3 UN IF PARA QUE NO SE MUESTRE SI data["rol"] ES ADMIN -->
+                @if($data["rol"] == "user")
                 <label for="inputDireccion">Dirección</label>
-                <input id="inputDireccion" name="direccion" type="text" value="{{ data["direccion"] }}">
+                <input id="inputDireccion" name="direccion" type="text" value="{{ $data["direccion"] }}">
                 <label for="inputCif">CIF</label>
-                <input if="inputCif" name="cif" type="text" value="{{ data["cif"] }}">
+                <input if="inputCif" name="cif" type="text" value="{{ $data["cif"] }}">
                 <label for="inputRazonSocial">Razón social</label>
-                <input id="inputRazonSocial" name="razonSocial" type="text" value="{{ data["razonSocial"] }}">
+                <input id="inputRazonSocial" name="razonSocial" type="text" value="{{ $data["razonSocial"] }}">
+                @endif
+
                 <button type="submit">Enviar</button>
             </form>
         </div>
