@@ -20,7 +20,6 @@ class DashboardController extends Controller
         $data["nombre"] = $tableUsers["name"];
         $data["correo"] = $tableUsers["email"];
 
-        $userRol = "admin";
         if ($userRol == "user") {  
             //Usuario normal requiero direccion, cif, razon social, mensajes propios y pedidos (con compra y plantillas asociadas).
             $tableCuentas = json_decode(json_encode(DB::table('cuentas')->where('id_usuarios',$userId)->select('id', 'direccion', 'cif', 'razon_social')->get()->first()), true);
@@ -102,8 +101,6 @@ class DashboardController extends Controller
             //AÑADIR ARRAY DE TODAS LAS PLANTILLAS EXISTENTES
             $data["plantillas"] = json_decode(json_encode(DB::table('plantillas')->select('id', 'precio', 'descripcion', 'url')->get()), true);
         }
-        dd($data);
-
         return view("vistas.dashboard", ["data" => $data]);
     }
 
