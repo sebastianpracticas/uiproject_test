@@ -16,6 +16,7 @@ class Plantillas extends Migration
         Schema::create('plantillas', function (Blueprint $table) {
             $table->id();
             $table->string('precio');
+            $table->string('nombre');
             $table->string('descripcion');
             $table->string('url');
             $table->timestamps();

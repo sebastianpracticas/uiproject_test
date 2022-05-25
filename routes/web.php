@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 use App\Http\Controllers\UsersController;
+use App\Http\Livewire\Shop\IndexComponent;
 
 #Ruta principal
 Route::get('/', function () {
     return view('vistas/home');
 });
 
- 
 #Rutas login
 Route::get('/login', function () {
     return view('vistas/login');
@@ -40,8 +40,12 @@ Route::get('/dashboard',function(){
     return view('vistas/dashboard');
 })->middleware('auth');
 
-
 #Ruta cerrar sesión
 Route::post('/logout',[UsersController::class, 'logout']);
+
+#Rutas Livewire
+Route::get('/plantillas',IndexComponent::class);
+
+######################################################################
 
 Route::post("/actualizarCuenta", [DatabaseController::class, 'updateAccount']);

@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Livewire Styles-->
+    @livewireStyles
 </head>
 
 <body>
@@ -74,22 +77,22 @@
 
                     </div>
                     <a href="#" class="d-flex align-items-center">
-                    <div class="w-100">
+                        <div class="w-100">
 
-                        <span>
-
-
-                        Hola {{Auth::user()->name }}
+                            <span>
 
 
-                        </span>
+                                Hola {{Auth::user()->name }}
 
-                    </div>
 
-                    
-                </a>
+                            </span>
 
-                @endguest
+                        </div>
+
+
+                    </a>
+
+                    @endguest
             </div>
         </nav>
 
@@ -136,7 +139,7 @@
             <p style="color: rgb(231, 231, 231);">Todos los derechos reservados 2022s @Copyright</p>
         </nav>
     </footer>
-    
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -146,6 +149,8 @@
 
     <script src="js/app.js"></script>
 
+    <!-- Livewire Scripts -->
+    @livewireScripts
 </body>
 
 </html>
