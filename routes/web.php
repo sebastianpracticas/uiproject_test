@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\LayoutController;
 use App\Http\Controllers\MessageController;
 
@@ -44,7 +45,7 @@ Route::get('/dashboard', [DashboardController::class, 'loadDashboard'])->middlew
 #Ruta cerrar sesión
 Route::post('/logout',[UsersController::class, 'logout']);
 
-Route::post("/actualizarCuenta", [DatabaseController::class, 'updateAccount']);
+Route::post("/actualizarCuenta", [AccountController::class, 'updateAccount']);
 
 Route::post("/nuevoMensaje", [MessageController::class, 'newMessage']);
 

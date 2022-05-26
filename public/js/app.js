@@ -37,3 +37,7 @@ function clickMensajes() {
     document.getElementById("misCompras").style.display = "none";
     document.getElementById("misMensajes").style.display = "block";
 }
+
+function mostrarChat(id) {
+    document.getElementById(id).style.display = "block";
+}

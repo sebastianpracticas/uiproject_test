@@ -37,7 +37,7 @@ class DashboardController extends Controller
                 $pedidoId = $tablePedido["id"];
                 $tablePedido["comentario"];
                 $tableCompra = json_decode(json_encode(DB::table('compras')->where('id_pedido',$pedidoId)->select('estado', 'cantidad_total')->get()->first()), true);
-                if (count($tableCompra)>0) {
+                if ($tableCompra!=null) {
                     $tablePedido["estado"] = $tableCompra["estado"];
                     $tablePedido["cantidad_total"] = $tableCompra["cantidad_total"];
                 }
@@ -66,7 +66,7 @@ class DashboardController extends Controller
                 $cuentaId = $consulta[0]["id_cuenta"];
                 $id_usuario = json_decode(json_encode(DB::table('cuentas')->where('id',$cuentaId)->get("id_usuarios")->first()), true);
                 $nombre = json_decode(json_encode(DB::table('users')->where('id',$id_usuario)->get("name")->first()), true);
-                $arrayMensajes[count($arrayMensajes)] = array($nombre["name"] => $consulta);
+                $arrayMensajes[$nombre["name"]] = $consulta;
             }
             $data["mensajes"] = $arrayMensajes;
 
@@ -77,7 +77,7 @@ class DashboardController extends Controller
                 $pedidoId = $tablePedido["id"];
                 $cuentaId = $tablePedido["id_cuenta"];
                 $estadoCompra = json_decode(json_encode(DB::table('compras')->where('id_pedido',$pedidoId)->select('estado', 'cantidad_total')->get()->first()), true);
-                if (count($estadoCompra)>0) {
+                if ($estadoCompra!=null) {
                     $tablePedido["estado_compra"] = $estadoCompra["estado"];
                     $tablePedido["cantidad_total_compra"] = $estadoCompra["cantidad_total"];
                 }
@@ -102,25 +102,5 @@ class DashboardController extends Controller
             $data["plantillas"] = json_decode(json_encode(DB::table('plantillas')->select('id', 'precio', 'descripcion', 'url')->get()), true);
         }
         return view("vistas.dashboard", ["data" => $data]);
-    }
-
-    public function updateAccount(Request $request) {
-        //Recuperar la cuenta cuyo id coincida con el usuario. Luego actualizar de usuario y de cuenta todo.
-        $userId = Auth::user()->id;
-        $userRole = json_decode(json_encode(DB::table('users')->where('id',$userId)->get('rol')->first()), true);
-
-        $inputNombre = request()->nombre;
-        $inputCorreo = request()->correo;
-        
-        DB::table('users')->where('id',$userId)->update(['name'=>$inputNombre,'email'=>$inputCorreo]);
-        
-        if ($userRole == "user") {
-            $inputDireccion = request()->direccion;
-            $inputCif = request()->cif;
-            $inputRazonSocial = request()->razonSocial;
-            DB::table('cuentas')->where('id_usuarios',$userId)->update(['direccion'=>$inputDireccion,'cif'=>$inputCif,'razon_social'=>$inputRazonSocial]);
-        }
-
-        return loadDashboard();
     }
 }

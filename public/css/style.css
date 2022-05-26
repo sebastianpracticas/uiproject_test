@@ -9,7 +9,7 @@
 }
 
 body {
-    padding-top: 90px;
+    padding-top: 70px;
 
 }
 
@@ -170,5 +170,74 @@ footer * {
 
 .dashboard-content {
     min-height: 700px;
-    padding-left: 1em;
+}
+
+.pedido {
+    padding-left: 1.3em;
+    padding-right: 1.3em;
+    padding-top: .7em;
+}
+
+.pedido-0 {
+    background-color: aquamarine;
+    color: black;
+}
+
+.pedido-1 {
+    background-color: rgb(153, 51, 255);
+    color: white;
+}
+
+.texto-precio {
+    font-weight: bold;
+}
+
+.texto-estado {
+    color: rgb(196, 0, 0);
+    font-weight: bold;
+}
+
+.mensaje-blanco, .mensaje-verde {
+    border-radius: 1.5em;
+    padding: 1em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.mensaje-blanco {
+    background-color: white;
+    margin-right: 10%;
+    margin-left: 2em;
+}
+
+.mensaje-verde {
+    background-color: rgb(226, 166, 241);
+    margin-left: 10%;
+    margin-right: 2em;
+}
+
+.titulo-chat {
+    background-color: #7227FF;
+    color: white;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.casilla-nuevo-mensaje {
+    background-color: #35303d;
+    bottom: 0px;
+    height: 80px;
+}
+
+.casilla-nuevo-mensaje * {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.body-chat {
+    min-height: 580px;
+}
+
+.m-top-1 {
+    margin-top: 1em;
 }

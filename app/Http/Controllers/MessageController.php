@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class MessageController extends Controller
 {
@@ -21,12 +24,13 @@ class MessageController extends Controller
         }
 
         DB::table('mensajes')->insert([
-            'id_cuenta' => $userId,
+            'id_cuenta' => $cuentaId,
             'mensaje' => $mensaje,
             'leido' => 0,
             'archivado' => 0,
             'es_respuesta' => $respuesta,
-            'fecha_hora' => strtotime(time()+7200)
+            'fecha_hora' => Carbon::now('Europe/Madrid')
         ]);
+        return redirect('dashboard')->with('status', 'Mensajes');
     }
 }

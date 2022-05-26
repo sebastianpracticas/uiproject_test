@@ -75,7 +75,7 @@
 </div>
 
 <!-- Footer -->
-<footer class="hideme">
+<footer>
     <nav class="enlaces-varios">
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
