@@ -14,6 +14,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
     <!-- Livewire Styles-->
     @livewireStyles
 </head>
@@ -81,10 +84,23 @@
 
                             <span>
 
-
+                                <!-- Usuario registrado -->
                                 Hola {{Auth::user()->name }}
 
 
+                            </span>
+
+                        </div>
+
+
+                    </a>
+
+                    <a href="#" class="d-flex align-items-center">
+                        <div class="w-100">
+
+                            <span>
+                                <!-- Livewire Carrito incluir componente-->
+                                @livewire('shop.cart-component')
                             </span>
 
                         </div>
