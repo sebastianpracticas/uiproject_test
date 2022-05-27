@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 use App\Http\Livewire\Shop\IndexComponent;
 use App\Http\Livewire\Shop\Cart\IndexComponent as CartComponent;
+use App\Http\Livewire\Shop\CheckoutComponent;
 
 #Ruta principal
 Route::get('/', function () {
@@ -50,7 +51,31 @@ Route::post('/logout', [UsersController::class, 'logout']);
 Route::get('/plantillas', IndexComponent::class)->middleware('auth');
 
 #Ruta Carrito
-Route::get('/cart',CartComponent::class);
+Route::get('/cart',CartComponent::class)->middleware('auth');
+
+#Ruta Checkout
+Route::get('/checkout',CheckoutComponent::class)->middleware('auth');
+
+#Demos
+Route::get('/demo', function () {
+    return view('demos/index');
+});
+
+Route::get('/demo2', function () {
+    return view('demos/index2');
+});
+
+Route::get('/demo3', function () {
+    return view('demos/index3');
+});
+
+Route::get('/demo4', function () {
+    return view('demos/index4');
+});
+
+Route::get('/demo5', function () {
+    return view('demos/index5');
+});
 ######################################################################
 
 Route::post("/actualizarCuenta", [DatabaseController::class, 'updateAccount']);
