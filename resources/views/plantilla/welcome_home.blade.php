@@ -42,7 +42,7 @@
                 </a>
                 <a href="#" class="d-flex align-items-center">
                     <div class="w-100">
-                        <span> PLANES </span>
+                        <span> PLANTILLAS </span>
                     </div>
                 </a>
                 <a href="#" class="d-flex align-items-center">
@@ -152,7 +152,7 @@
                     <a href="#">Sobre nosotros</a>
                 </div>
             </div>
-            <p style="color: rgb(231, 231, 231);">Todos los derechos reservados 2022s @Copyright</p>
+            <p style="color: rgb(231, 231, 231);" class="text-center p-4">Todos los derechos reservados 2022s @Copyright</p>
         </nav>
     </footer>
 

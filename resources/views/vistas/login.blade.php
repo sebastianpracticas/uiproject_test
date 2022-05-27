@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-sm-4 mt-5 mb-5">
-            
+            <h4 class="center">Iniciar sesión</h4>
             <form method="POST" action="/login">
 
                 <!-- Mensaje que paso por el redirect -->

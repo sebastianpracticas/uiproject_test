@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-sm-4 mt-5 mb-5">
-
+        <h4 class="center">Registrarse</h4>
             <form method="POST" action="/register">
 
                 <!-- Mensaje que paso por el redirect -->

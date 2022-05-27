@@ -30,7 +30,7 @@ class UsersController extends Controller
 
             #Evitar una vulnerabilidad Session Fixation 
             request()->session()->regenerate();
-            return  redirect('/dashboard');
+            return  redirect('/');
         }
 
         return  redirect('/login')->with('status', 'Credenciales erroneas');
