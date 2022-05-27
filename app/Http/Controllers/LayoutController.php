@@ -36,4 +36,10 @@ class LayoutController extends Controller
 
         return redirect('dashboard')->with('status', 'Plantillas');
     }
+
+    public function deleteLayout(Request $request) {
+        $id = $request->id;
+
+        DB::table('plantillas')->where('id', $id)->delete();
+    }
 }

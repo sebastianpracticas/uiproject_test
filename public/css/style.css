@@ -251,3 +251,9 @@ footer * {
     top: .2em;
     right: .2em;
 }
+
+.boton-eliminar-plantilla {
+    position: absolute;
+    bottom: .2em;
+    right: .2em;
+}

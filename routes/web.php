@@ -54,4 +54,6 @@ Route::post("/nuevaPlantilla", [LayoutController::class, 'newLayout']);
 
 Route::post("/actualizarPlantilla", [LayoutController::class, 'updateLayout']);
 
+Route::post("/eliminarPlantilla", [LayoutController::class, 'deleteLayout']);
+
 Route::post("/actualizarCompra", [PurchaseController::class, 'updatePurchase']);
