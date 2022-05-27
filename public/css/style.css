@@ -241,3 +241,13 @@ footer * {
 .m-top-1 {
     margin-top: 1em;
 }
+
+.dashboard-content {
+    background-color: #CACACA;
+}
+
+.boton-editar-plantilla {
+    position: absolute;
+    top: .2em;
+    right: .2em;
+}

@@ -17,6 +17,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\LayoutController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\PurchaseController;
 
 #Ruta principal
 Route::get('/', function () {
@@ -52,3 +53,5 @@ Route::post("/nuevoMensaje", [MessageController::class, 'newMessage']);
 Route::post("/nuevaPlantilla", [LayoutController::class, 'newLayout']);
 
 Route::post("/actualizarPlantilla", [LayoutController::class, 'updateLayout']);
+
+Route::post("/actualizarCompra", [PurchaseController::class, 'updatePurchase']);

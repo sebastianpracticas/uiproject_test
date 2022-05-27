@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class LayoutController extends Controller
 {
@@ -16,7 +18,8 @@ class LayoutController extends Controller
             'descripcion' => $descripcion,
             'url' => $url
         ]);
-        return true;
+        
+        return redirect('dashboard')->with('status', 'Plantillas');
     }
 
     public function updateLayout(Request $request) {
@@ -30,6 +33,7 @@ class LayoutController extends Controller
             'descripcion' => $descripcion,
             'url' => $url
         ]);
-        return true;
+
+        return redirect('dashboard')->with('status', 'Plantillas');
     }
 }

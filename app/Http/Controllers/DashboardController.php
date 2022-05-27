@@ -101,6 +101,7 @@ class DashboardController extends Controller
             //AÑADIR ARRAY DE TODAS LAS PLANTILLAS EXISTENTES
             $data["plantillas"] = json_decode(json_encode(DB::table('plantillas')->select('id', 'precio', 'descripcion', 'url')->get()), true);
         }
+
         return view("vistas.dashboard", ["data" => $data]);
     }
 }
