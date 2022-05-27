@@ -6,6 +6,7 @@ use App\Models\Users;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 class UsersController extends Controller
 {
@@ -73,6 +74,17 @@ class UsersController extends Controller
                 'email' => "$e",
                 'password' => "$p"
             ]);
+            
+            #
+            $userId = json_decode(json_encode(DB::table('users')->where('name', "$n")->get('id')->first()), true)["id"];
+            
+            DB::table('cuentas')->insert([
+                'id_usuarios' => $userId,
+                'direccion' => "",
+                'cif' => "",
+                'razon_social' => ""
+            ]);
+
             return redirect('/login')->with('status', 'Usuario Creado');
         }
 

@@ -17,6 +17,16 @@ use App\Http\Livewire\Shop\IndexComponent;
 use App\Http\Livewire\Shop\Cart\IndexComponent as CartComponent;
 use App\Http\Livewire\Shop\CheckoutComponent;
 
+#######################
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AccountController;
+use App\Http\Controllers\LayoutController;
+use App\Http\Controllers\MessageController;
+use App\Http\Controllers\PurchaseController;
+
+
+
+
 #Ruta principal
 Route::get('/', function () {
     return view('vistas/home');
@@ -37,10 +47,7 @@ Route::get('/register', function () {
 Route::post('/register', [UsersController::class, 'register']);
 
 #Ruta dashboard
-Route::get('/dashboard', function () {
-
-    return view('vistas/dashboard');
-})->middleware('auth');
+Route::get('/dashboard', [DashboardController::class, 'loadDashboard'])->middleware('auth');
 
 #Ruta cerrar sesión
 Route::post('/logout', [UsersController::class, 'logout']);
@@ -76,6 +83,18 @@ Route::get('/demo4', function () {
 Route::get('/demo5', function () {
     return view('demos/index5');
 });
+
+
 ######################################################################
 
-Route::post("/actualizarCuenta", [DatabaseController::class, 'updateAccount']);
+Route::post("/actualizarCuenta", [AccountController::class, 'updateAccount']);
+
+Route::post("/nuevoMensaje", [MessageController::class, 'newMessage']);
+
+Route::post("/nuevaPlantilla", [LayoutController::class, 'newLayout']);
+
+Route::post("/actualizarPlantilla", [LayoutController::class, 'updateLayout']);
+
+Route::post("/eliminarPlantilla", [LayoutController::class, 'deleteLayout']);
+
+Route::post("/actualizarCompra", [PurchaseController::class, 'updatePurchase']);
