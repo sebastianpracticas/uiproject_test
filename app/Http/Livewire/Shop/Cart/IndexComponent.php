@@ -16,7 +16,7 @@ class IndexComponent extends Component
         //Enviamos a la vista livewire.shop.cart.index-component la variable 
         //cart_items
         return view('livewire.shop.cart.index-component', compact('cart_items'))
-        ->extends('plantilla/welcome_home')
+        ->extends('plantilla/welcome')
         ->section('content');
     }
 

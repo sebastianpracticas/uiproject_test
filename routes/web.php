@@ -85,6 +85,10 @@ Route::get('/demo5', function () {
 });
 
 
+Route::get('/plantilla', function () {
+    return view('plantilla/welcome');
+});
+
 ######################################################################
 
 Route::post("/actualizarCuenta", [AccountController::class, 'updateAccount']);

@@ -1,2 +1,11 @@
 #sincronizar con la rueda de abajo izquierda
 git commit -a -m "Añadir comandos dos"
+ $host_name = 'db5008085334.hosting-data.io';
+  $database = 'dbs6733865';
+  $user_name = 'dbu660068';
+  $password = 'proyecto"M12"';
+
+
+  FTP:
+  User: u107717903
+  Password: LaravelFtp

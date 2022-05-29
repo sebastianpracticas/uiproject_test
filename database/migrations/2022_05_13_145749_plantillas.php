@@ -19,6 +19,7 @@ class Plantillas extends Migration
             $table->string('nombre');
             $table->string('descripcion');
             $table->string('url');
+            $table->string('imagen');
             $table->timestamps();
         });
     }

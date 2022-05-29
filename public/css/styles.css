@@ -1,0 +1,43 @@
+.menuPrincipal {
+    background: linear-gradient(
+        76.41deg,
+        rgba(110, 110, 237, 0.84) -23.1%,
+        rgba(153, 51, 255, 0.84) 43.41%,
+        rgba(110, 110, 237, 0.84) 111.68%
+    );
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.menuPrincipal:hover,
+.nav-link:hover {
+    color: rgb(220, 217, 217) !important;
+}
+
+#botonCarrito {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#botonCarrito:hover {
+    color: rgb(220, 217, 217) !important;
+}
+
+#tituloPagina {
+    font-size: 25px;
+    padding-left: 50px;
+    color: white;
+}
+
+#footer {
+    background-color: rgba(0, 0, 0, 0.901);
+}
+
+
+.p1{
+    height: 120px;;
+}

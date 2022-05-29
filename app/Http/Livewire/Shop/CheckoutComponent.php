@@ -9,7 +9,7 @@ class CheckoutComponent extends Component
     public function render()
     {
         return view('livewire.shop.checkout-component')
-            ->extends('plantilla/welcome_home')
+            ->extends('plantilla/welcome')
             ->section('content');
     }
 }

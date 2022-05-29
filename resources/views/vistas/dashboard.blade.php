@@ -1,5 +1,5 @@
 <!-- Heredo de la plantilla/welcome -->
-@extends('plantilla/welcome_home')
+@extends('plantilla/welcome')
 
 <!-- Inicio de la seccion content -->
 @section('content')

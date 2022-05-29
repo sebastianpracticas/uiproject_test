@@ -16,7 +16,7 @@ class IndexComponent extends Component
         //Regresa la vista de index-component con la variable plantillas
         //que extiende de la plantilla principal
         return view('livewire.shop.index-component', compact('plantillas'))
-            ->extends('plantilla/welcome_home')
+            ->extends('plantilla/welcome')
             ->section('content');
     }
 
