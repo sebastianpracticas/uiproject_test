@@ -23,7 +23,7 @@
     border-color: transparent;
 }
 
-#botonCarrito:hover {
+#botonCarrito:hover, #cerrar:hover {
     color: rgb(220, 217, 217) !important;
 }
 
@@ -40,4 +40,13 @@
 
 .p1{
     height: 120px;;
+}
+
+form#formCerrar {
+    margin-top: 7px;
+    text-decoration: none;
+}
+
+form#formCerrar:hover  {
+  color: red;
 }

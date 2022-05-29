@@ -71,7 +71,7 @@
                         <span>
                             <form method="POST" action="/logout">
                                 @csrf
-                                <a href="#" onclick="this.closest('form').submit()">CERRAR SESIÓN</a>
+                                <a  href="#" onclick="this.closest('form').submit()">CERRAR SESIÓN</a>
                             </form>
                         </span>
                     </div>
