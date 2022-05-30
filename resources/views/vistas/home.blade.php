@@ -5,12 +5,12 @@
 @section('content')
 
 <!--Titulo-->
-<div class="container p-4">
+<div class="container pt-4 pb-4">
 
     <div class="row">
 
         <!-- Empieza ahora! -->
-        <div class=" row p-4">
+        <div class=" row pt-4 pb-4">
 
             <div class=" text-center">
 
@@ -23,9 +23,9 @@
         <!--  -->
 
         <!--Nosotros-->
-        <div class="row p-4">
+        <div class="row pt-4 pt-4 pb-4">
 
-            <div class="text-center pb-4">
+            <div class="text-center pt-4 pb-4">
 
                 <img src="img/Nosotros.png" class="rounded img-fluid  " alt="Diseñamos tu web">
 
@@ -33,7 +33,7 @@
 
             <div class="row justify-content-center">
 
-                <div class="col-6 text-center">
+                <div class="col-md-4 text-center">
 
                     <h1>¿Quiénes somos?</h1>
 
@@ -48,11 +48,11 @@
 
 
         <!--Servicios-->
-        <div class="row p-4 text-center">
+        <div class="row pt-4 pb-4 text-center">
 
-            <h1 class="p-4">¿Qué ofrecemos?</h1>
+            <h1 class="pt-4 pb-4">¿Qué ofrecemos?</h1>
 
-            <div class=" col-md-4 p-4">
+            <div class=" col-md-4 pt-4 pb-4">
 
                 <img src="img/Seo.png" alt="" class="imagen-servicios">
 
@@ -63,7 +63,7 @@
 
             </div>
 
-            <div class=" col-md-4 p-4">
+            <div class=" col-md-4 pt-4 pb-4">
 
                 <img src="img/Web.png" alt="" class="imagen-servicios">
 
@@ -73,7 +73,7 @@
 
             </div>
 
-            <div class="  col-md-4 p-4">
+            <div class="  col-md-4 pt-4 pb-4">
 
                 <img src="img/Redes Sociales.png" alt="" class="imagen-servicios">
 
@@ -88,9 +88,9 @@
     </div>
 
     <!--portafolio-->
-    <div class="row p-4 text-center">
+    <div class="row pt-4 pb-4 text-center">
 
-        <h1 class=" p-4 ">¿Algunos ejemplos?</h1>
+        <h1 class=" pt-4 pb-4 ">¿Algunos ejemplos?</h1>
 
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -128,10 +128,10 @@
 
     <!--Razones para elegirnos-->
 
-    <div class="row p-4 text-center ">
+    <div class="row pt-4 pb-4 text-center ">
 
         <div class="">
-            <h1 class="p-4">¿Por qué elegirnos?</h1>
+            <h1 class="pt-4 pb-4">¿Por qué elegirnos?</h1>
         </div>
         <div class="col-md-4 ">
             <h1 class=" p1">Trato personalizado</h1>
