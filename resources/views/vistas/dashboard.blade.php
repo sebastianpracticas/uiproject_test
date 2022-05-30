@@ -13,7 +13,10 @@
                     <span>{{$data["rol"]=="user"?"Mis Compras":"Compras"}}</span>
                 </div>
                 <div class="dashboard-menu-button col-xs-12 col-sm-12 col-md-12 col-lg-12" onClick="clickMensajes()">
-                    <span>{{$data["rol"]=="user"?"Mis Mensajes":"Mensajes"}}</span><span style="color: red;">({{ count($data["mensajes"]) }})</span>
+                    <span>{{$data["rol"]=="user"?"Mis Mensajes":"Mensajes"}}</span>
+                    @if($data["rol"] == "admin")
+                    <span style="color: red;">({{ count($data["mensajes"]) }})</span>
+                    @endif
                 </div>
                 @if($data["rol"] == "admin")
                 <div class="dashboard-menu-button col-xs-12 col-sm-12 col-md-12 col-lg-12" onClick="clickPlantillas()">
@@ -172,15 +175,21 @@
                 @foreach($data["plantillas"] as $plantilla)
                 <div id="plantilla-{{ $plantilla["id"] }}" class="col-xs-12 col-sm-12 col-md-6 col-lg-4 pedido-<?php echo ($counter%2) ?>">
                     <button class="btn btn-info boton-editar-plantilla" onclick="mostrarPlantilla({{ $plantilla['id'] }})">Editar</button>
-                    <h3>{{ $plantilla["descripcion"] }}</h3>
+                    <h3>{{ $plantilla["nombre"] }}</h3>
+                    <p>Nombre: {{ $plantilla["descripcion"] }}</p>
                     <p>Precio: {{ $plantilla["precio"] }}€</p>
                     <p>Url: {{ $plantilla["url"] }}</p>
+                    <p>Imagen: {{ $plantilla["imagen"] }}</p>
                 </div>
                 <div id="editar-plantilla-{{ $plantilla["id"] }}" class="col-xs-12 col-sm-12 col-md-6 col-lg-4 pedido-<?php echo ($counter%2) ?>" style="display: none;">
                     <form method="post" action="actualizarPlantilla">
                         @csrf
                         <button class="btn btn-info boton-editar-plantilla" type="submit">Guardar</button>
                         <input type="hidden" name="id" value="{{ $plantilla["id"] }}">
+                        <div>
+                            <label for="inputNombre">Nombre:</label>
+                            <input id="inputNombre" name="nombre" value="{{ $plantilla["nombre"] }}">
+                        </div>
                         <div>
                             <label for="inputDescripcion">Descripcion:</label>
                             <input id="inputDescripcion" name="descripcion" value="{{ $plantilla["descripcion"] }}">
@@ -193,6 +202,10 @@
                             <label for="inputUrl">Url:</label>
                             <input id="inputUrl" name="url" value="{{ $plantilla["url"] }}">
                         </div>
+                        <div>
+                            <label for="inputImagen">Imagen:</label>
+                            <input id="inputImagen" name="imagen" value="{{ $plantilla["imagen"] }}">
+                        </div>
                     </form>
                 </div>
                 <?php $counter++ ?>
@@ -201,12 +214,16 @@
                     <h4>Nueva Plantilla</h4>
                     <form method="post" action="nuevaPlantilla">
                         @csrf
-                        <label for="inputPrecio">Precio:</label>
-                        <input class="form-control" if="inputPrecio" name="precio">
-                        <label for="inputDescripcion">Descripcion:</label>
-                        <input class="form-control" id="inputDescripcion" name="descripcion">
-                        <label for="inputUrl">Url:</label>
-                        <input class="form-control" id="inputUrl" name="url">
+                        <label for="inputNombreNew">Nombre:</label>
+                        <input class="form-control" id="inputNombreNew" name="nombre">
+                        <label for="inputPrecioNew">Precio:</label>
+                        <input class="form-control" id="inputPrecioNew" name="precio">
+                        <label for="inputDescripcionNew">Descripcion:</label>
+                        <input class="form-control" id="inputDescripcionNew" name="descripcion">
+                        <label for="inputUrlNew">Url:</label>
+                        <input class="form-control" id="inputUrlNew" name="url">
+                        <label for="inputImagenNew">Imágen:</label>
+                        <input class="form-control" id="inputImagenNew" name="imagen">
                         <br>
                         <button class="btn btn-primary" type="submit">Añadir plantilla nueva</button>
                         <br><br>

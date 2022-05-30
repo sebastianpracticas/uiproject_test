@@ -85,7 +85,7 @@ class DashboardController extends Controller
                 $tableRelPlantillas = json_decode(json_encode(DB::table('rel_plantillas_pedidos')->where('id_pedido',$pedidoId)->get('id_plantilla')), true);
                 foreach($tableRelPlantillas as $tableRelPlantilla) {
                     $plantillaId = $tableRelPlantilla["id_plantilla"];
-                    $tablePlantilla = json_decode(json_encode(DB::table('plantillas')->where('id', $plantillaId)->select('precio', 'descripcion', 'url')->get()->first()), true);
+                    $tablePlantilla = json_decode(json_encode(DB::table('plantillas')->where('id', $plantillaId)->select('nombre','precio','descripcion','url','imagen')->get()->first()), true);
                     array_push($arrayPlantillas, $tablePlantilla);
                 }
                 $tablePedido["plantillas"] = $arrayPlantillas;
@@ -99,9 +99,9 @@ class DashboardController extends Controller
             $data["pedidos"] = $arrayPedidos;
 
             //AÑADIR ARRAY DE TODAS LAS PLANTILLAS EXISTENTES
-            $data["plantillas"] = json_decode(json_encode(DB::table('plantillas')->select('id', 'precio', 'descripcion', 'url')->get()), true);
+            $data["plantillas"] = json_decode(json_encode(DB::table('plantillas')->select('nombre','id', 'precio', 'descripcion', 'url','imagen')->get()), true);
         }
-
+        
         return view("vistas.dashboard", ["data" => $data]);
     }
 }
