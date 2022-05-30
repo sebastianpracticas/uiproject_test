@@ -4,7 +4,7 @@
         @foreach($plantillas as $plantilla)
         <div class="col-md-4 p-4">
             <div class="card">
-
+            <img class="card-img-top" src="{{$plantilla->imagen}}" alt="Card image cap">
                 <div class="card-body">
 
                     <h5 class="card-title">{{$plantilla->nombre}}</h5>
