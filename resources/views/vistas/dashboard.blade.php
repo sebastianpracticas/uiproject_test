@@ -4,7 +4,7 @@
 <!-- Inicio de la seccion content -->
 @section('content')
     <div class="row">
-        <div class="dashboard-menu col-xs-12 col-sm-12 col-md-4 col-lg-3">
+        <div class="dashboard-menu col-xs-12 col-sm-12 col-md-4 col-lg-3 p-4">
             <div class="row">
                 <div class="dashboard-menu-button col-xs-12 col-sm-12 col-md-12 col-lg-12" onClick="clickCuenta()">
                     <span>Mi Cuenta</span>
@@ -25,7 +25,7 @@
                 @endif
             </div>
         </div>
-        <div id="miCuenta" style="{{ (session('status') == null || session('status') == "Cuenta")?"display: block;":"display: none;" }}" class="dashboard-content col-xs-12 col-sm-12 col-md-8 col-lg-9">
+        <div id="miCuenta" style="{{ (session('status') == null || session('status') == "Cuenta")?"display: block;":"display: none;" }}" class="dashboard-content col-xs-12 col-sm-12 col-md-8 col-lg-9 p-4">
             <form class="m-top-1" method="post" action="actualizarCuenta">
                 @csrf
                 <div class="form-group">
