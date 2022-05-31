@@ -28,6 +28,6 @@ class RelPlantillasPedidos extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('compras');
+        Schema::dropIfExists('rel_plantillas_pedidos');
     }
 }
