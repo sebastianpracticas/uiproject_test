@@ -16,7 +16,7 @@ use App\Http\Controllers\UsersController;
 use App\Http\Livewire\Shop\IndexComponent;
 use App\Http\Livewire\Shop\Cart\IndexComponent as CartComponent;
 use App\Http\Livewire\Shop\CheckoutComponent;
-use App\Http\Controllers\CuentasController;
+use App\Http\Controllers\PedidosController;
 
 #######################
 
@@ -91,7 +91,7 @@ Route::get('/plantilla', function () {
     return view('plantilla/welcome');
 });
 
-Route::post('/pagar',[CuentasController::class,'index']);
+Route::post('/pagar',[PedidosController::class,'index']);
 
 
 

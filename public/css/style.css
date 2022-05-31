@@ -166,11 +166,11 @@ footer * {
 
 .dashboard-menu {
     background-color: rgb(44, 44, 44);
-    min-height: 700px;
+    /* min-height: 700px; */
 }
 
 .dashboard-content {
-    min-height: 700px;
+    /* min-height: 700px; */
 }
 
 .pedido {

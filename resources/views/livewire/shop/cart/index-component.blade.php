@@ -20,8 +20,7 @@
                     <td>{{$item->quantity = 1}}</td>
 
                     <td>
-                        <button wire:click="delete_item({{$item->id}}) " type="button"
-                            class="btn btn-danger">Eliminar</button>
+                        <button wire:click="delete_item({{$item->id}}) " type="button" class="btn btn-danger">Eliminar</button>
                     </td>
                 </tr>
 
@@ -36,7 +35,7 @@
     <div class="col-md-4 ">
         <form method="POST" action="/pagar" id="formCerrar">
             <div class="form-group">
-            @csrf
+                @csrf
                 <label for="exampleFormControlTextarea1">¿Qué servicios buscas? </label>
                 <textarea name="comentario" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
