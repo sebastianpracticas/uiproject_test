@@ -29,10 +29,19 @@
                 @endforeach
             </tbody>
         </table>
-        
+
         <h4>Total: {{ \Cart::session(auth()->id())->getTotal()}}</h4>
 
-        <a href="/checkout" class="btn btn-primary">Pagar</a>
     </div>
-
+    <div class="col-md-4 ">
+        <form method="POST" action="/pagar" id="formCerrar">
+            <div class="form-group">
+            @csrf
+                <label for="exampleFormControlTextarea1">¿Qué servicios buscas? </label>
+                <textarea name="comentario" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <br>
+            <input class="btn btn-primary btn-block mt-2 mb-2" type="submit" value="Enviar pedido">
+        </form>
+    </div>
 </div>

@@ -16,8 +16,10 @@ use App\Http\Controllers\UsersController;
 use App\Http\Livewire\Shop\IndexComponent;
 use App\Http\Livewire\Shop\Cart\IndexComponent as CartComponent;
 use App\Http\Livewire\Shop\CheckoutComponent;
+use App\Http\Controllers\CuentasController;
 
 #######################
+
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\LayoutController;
@@ -58,7 +60,7 @@ Route::post('/logout', [UsersController::class, 'logout']);
 Route::get('/plantillas', IndexComponent::class)->middleware('auth');
 
 #Ruta Carrito
-Route::get('/cart',CartComponent::class)->middleware('auth');
+Route::get('/cart',CartComponent::class)->middleware('auth')->name('cart');
 
 #Ruta Checkout
 Route::get('/checkout',CheckoutComponent::class)->middleware('auth');
@@ -88,6 +90,10 @@ Route::get('/demo5', function () {
 Route::get('/plantilla', function () {
     return view('plantilla/welcome');
 });
+
+Route::post('/pagar',[CuentasController::class,'index']);
+
+
 
 ######################################################################
 
