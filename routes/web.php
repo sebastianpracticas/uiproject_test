@@ -86,7 +86,6 @@ Route::get('/demo5', function () {
     return view('demos/index5');
 });
 
-
 Route::get('/plantilla', function () {
     return view('plantilla/welcome');
 });

@@ -29,7 +29,7 @@
             </tbody>
         </table>
 
-        <h4>Total: {{ \Cart::session(auth()->id())->getTotal()}}</h4>
+        <h4>Total: {{ \Cart::session(auth()->id())->getTotal()}} €</h4>
 
     </div>
     <div class="col-md-4 ">
@@ -38,6 +38,8 @@
                 @csrf
                 <label for="exampleFormControlTextarea1">¿Qué servicios buscas? </label>
                 <textarea name="comentario" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+               
+                <input style="display:none" type="text" id="precio" name="precio"  value="{{ \Cart::session(auth()->id())->getTotal()}}">
             </div>
             <br>
             <input class="btn btn-primary btn-block mt-2 mb-2" type="submit" value="Enviar pedido">

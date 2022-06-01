@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Compras;
 use App\Models\Pedidos;
+use App\Models\Cuentas;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,10 +18,30 @@ class PedidosController extends Controller
      */
     public function index()
     {
-        $comentario = request()->only('comentario');
+
+        $precio =  request()->precio;
 
 
-        dd(Auth::user());
+        $comentario = request()->validate([
+            'comentario' => ['required', 'string'],
+
+        ]);
+
+        $c = $comentario['comentario'];
+
+
+        $id_cuenta =   Cuentas::where('id_usuarios', Auth::user()->id)->value('id');
+
+        $id =  Pedidos::insertGetId([
+            'id_cuenta' => $id_cuenta,
+            'comentario' => "$c",
+        ]);
+
+        Compras::insert([
+            "id_pedido" => $id,
+            "estado" => "PENDIENTE",
+            "cantidad_total" => $precio
+        ]);
     }
 
     /**
