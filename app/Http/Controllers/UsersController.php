@@ -66,7 +66,7 @@ class UsersController extends Controller
         $p =   Hash::make(request()->password);
 
 
-        if (Users::where('name', "$n")->value('name') == null) {
+        if ((Users::where('name', "$n")->value('name') == null) && (Users::where('email', "$e")->value('email') == null)) {
 
 
             Users::insert([
@@ -75,7 +75,7 @@ class UsersController extends Controller
                 'password' => "$p"
             ]);
             
-            #
+            #Comprobar Usaurio y Email
             $userId = json_decode(json_encode(DB::table('users')->where('name', "$n")->get('id')->first()), true)["id"];
             
             DB::table('cuentas')->insert([

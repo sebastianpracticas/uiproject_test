@@ -9,6 +9,11 @@
 
     <div class="row p-4">
 
+    @if(session('status'))
+                <p class="error">
+                    {{session('status')}}
+                </p>
+@endif
         <!-- Empieza ahora! -->
         <div class=" row pt-4 pb-4"  data-aos="fade-down">
 

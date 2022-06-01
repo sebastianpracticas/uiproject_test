@@ -42,7 +42,7 @@
                 <input style="display:none" type="text" id="precio" name="precio"  value="{{ \Cart::session(auth()->id())->getTotal()}}">
             </div>
             <br>
-            <input class="btn btn-primary btn-block mt-2 mb-2" type="submit" value="Enviar pedido">
+            <input wire:click="delete_item_all()"class="btn btn-primary btn-block mt-2 mb-2" type="submit" value="Enviar pedido">
         </form>
     </div>
 </div>

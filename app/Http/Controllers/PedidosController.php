@@ -42,6 +42,10 @@ class PedidosController extends Controller
             "estado" => "PENDIENTE",
             "cantidad_total" => $precio
         ]);
+
+
+        return redirect('/')->with('status', 'Un comercial se pondrá en contacto, ¡Gracias!');
+
     }
 
     /**

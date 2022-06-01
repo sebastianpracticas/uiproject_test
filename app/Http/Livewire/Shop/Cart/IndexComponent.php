@@ -23,4 +23,8 @@ class IndexComponent extends Component
     public function delete_item($item){
         \Cart::session(auth()->id())->remove($item);
     }
+
+    public function delete_item_all(){
+        \Cart::session(auth()->id())->clear();
+    }
 }
