@@ -15,7 +15,7 @@
                 @foreach($cart_items as $item)
                 <tr>
 
-                    <td>{{$item->name}}</td>
+                    <td>{{$item->id}}</td>
                     <td>{{$item->price}}</td>
                     <td>{{$item->quantity = 1}}</td>
 
@@ -31,6 +31,8 @@
 
         <h4>Total: {{ \Cart::session(auth()->id())->getTotal()}} €</h4>
 
+       
+
     </div>
     <div class="col-md-4 ">
         <form method="POST" action="/pagar" id="formCerrar">
@@ -40,6 +42,7 @@
                 <textarea name="comentario" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                
                 <input style="display:none" type="text" id="precio" name="precio"  value="{{ \Cart::session(auth()->id())->getTotal()}}">
+                <input style="display:none" type="text" id="idCarrito" name="idCarrito"  value="  {{ \Cart::session(auth()->id())->getContent('id')}}">
             </div>
             <br>
             <input wire:click="delete_item_all()"class="btn btn-primary btn-block mt-2 mb-2" type="submit" value="Enviar pedido">
